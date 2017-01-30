@@ -4,10 +4,11 @@ description = "Machine Learning Framework for Hackers"
 version = "0.2.1"
 authors = [
   "Maximilian Goisser <max@autumnai.com>",
-  "Michael Hirn <mj@autumnai.com>"
+  "Michael Hirn <mj@autumnai.com>",
+  "Bernhard Schuster <bernhard@ratpoison.io>",
 ]
-repository = "https://github.com/autumnai/leaf"
-homepage = "https://github.com/autumnai/leaf"
+repository = "https://github.com/ratpoison-io/leaf"
+homepage = "https://ratpoison.io/leaf"
 documentation = "http://autumnai.github.io/leaf"
 readme = "README.md"
 keywords = ["deep-learning", "neural-networks", "machine-learning", "framework"]
@@ -16,22 +17,20 @@ license = "MIT OR Apache-2.0"
 build = "build.rs"
 
 [dependencies]
-collenchyma = { git = "https://github.com/alexandermorozov/collenchyma", default-features = false }
-collenchyma-blas = { git = "https://github.com/alexandermorozov/collenchyma-blas", default-features = false }
-collenchyma-nn = { git = "https://github.com/alexandermorozov/collenchyma-nn", default-features = false }
+collenchyma = { path = "../collenchyma", default-features = false }
+collenchyma-blas = { path = "../collenchyma-blas", default-features = false }
+collenchyma-nn = { path = "../collenchyma-nn", default-features = false }
 
 log = "0.3.2"
 rand = "0.3.0"
 num = "0.1"
-
-capnp = "0.6.2"
-
+capnp = "0.8.0"
 timeit = "0.1.2"
 
 clippy = { version = "0.0.41", optional = true }
 
 [build-dependencies]
-capnpc = "0.6.1"
+capnpc = "0.8.1"
 
 [dev-dependencies]
 env_logger = "0.3"
